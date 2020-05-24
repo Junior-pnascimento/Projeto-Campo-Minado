@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View, Alert } from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, Text, View, Alert} from 'react-native';
 import params from './src/params'
-import Field from './src/components/Field'
 import MineField from './src/components/MineField'
 import Header from './src/components/Header'
 import LevelSelection from './src/screens/LevelSelection'
@@ -48,7 +47,7 @@ export default class App extends Component {
 
     if (lost) {
       showMines(board)
-      Alert.alert('Perdeeeeeu!', 'Que buuuuurro!')      
+      Alert.alert('Perdeeeeu!', 'Que buuuurro!')
     }
 
     if (won) {
@@ -86,7 +85,7 @@ export default class App extends Component {
           onFlagPress={() => this.setState({ showLevelSelection: true })} />
         <View style={styles.board}>
           <MineField board={this.state.board} 
-            onOpenField={this.onOpenField} 
+            onOpenField={this.onOpenField}
             onSelectField={this.onSelectField} />
         </View>
       </View>

@@ -3,11 +3,11 @@ import { View, StyleSheet } from 'react-native'
 
 export default props => {
     return (
-        <View style={StyleSheet.container}>
-            <View style={[Styles.flagpole, props.bigger ? styles.flagpoleBigger : null]} />
-            <View style={[styles.flag, props.bigger ? styles.flagBigger : null]} />
-            <View style={[Styles.base1, props.bigger ? styles.base1Bigger : null]} />
-            <View style={[Styles.base2, props.bigger ? styles.base2Bigger : null]} />
+        <View style={styles.container}>
+           <View style={[styles.flagpole, props.bigger ? styles.flagpoleBigger : null]} />
+           <View style={[styles.flag, props.bigger ? styles.flagBigger : null]} />
+           <View style={[styles.base1, props.bigger ? styles.base1Bigger : null]} />
+           <View style={[styles.base2, props.bigger ? styles.base2Bigger : null]} /> 
         </View>
     )
 }
@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
     flagBigger: {
         height: 10,
         width: 14,
-        marginLeft: 3,        
+        marginLeft: 3,
     },
     base1Bigger: {
         height: 4,
-        width: 20,
+        width: 12,
         marginTop: 20,
         marginLeft: 12,
     },
@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
         height: 4,
         width: 20,
         marginLeft: 8,
-        marginTop: 24,
+        marginTop: 24
     }
 })

@@ -14,10 +14,12 @@ export default props => {
     if (!opened && !exploded) styleField.push(styles.regular)
 
     let color = null
-    if (nearMines == 1) color = '#2A28D7'
-    if (nearMines == 2) color = '#2B520F'
-    if (nearMines > 2 && nearMines < 6) color = '#F906A'
-    if (nearMines >= 6) color = '#F221A9'
+    if (nearMines > 0) {
+        if (nearMines == 1) color = '#2A28D7'
+        if (nearMines == 2) color = '#2B520F'
+        if (nearMines > 2 && nearMines < 6) color = '#F9060A'
+        if (nearMines >= 6) color = '#F221A9'
+    }
 
     return (
         <TouchableWithoutFeedback onPress={props.onOpen}
@@ -26,7 +28,7 @@ export default props => {
                 {!mined && opened && nearMines > 0 ?
                     <Text style={[styles.label, { color: color }]}>
                         {nearMines}</Text> : false}
-                {mided && opened ? <Mine /> : false}
+                {mined && opened ? <Mine /> : false}
                 {flagged && !opened ? <Flag /> : false}
             </View>
         </TouchableWithoutFeedback>

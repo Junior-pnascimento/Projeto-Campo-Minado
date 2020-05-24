@@ -3,12 +3,12 @@ import { View, StyleSheet } from 'react-native'
 
 export default props => {
     return (
-        <View style={StyleSheet.container}>
-            <View style={StyleSheet.coreMine} />
-            <View style={StyleSheet.line} />
-            <View style={[StyleSheet.line, { transform: [{ rotate: '45deg' }] }]} />
-            <View style={[StyleSheet.line, { transform: [{ rotate: '90deg' }] }]} />
-            <View style={[StyleSheet.line, { transform: [{ rotate: '135deg' }] }]} />
+        <View style={styles.container}>
+            <View style={styles.coreMine} />
+            <View style={styles.line} />
+            <View style={[styles.line, { transform: [{ rotate: '45deg' }] }]} />
+            <View style={[styles.line, { transform: [{ rotate: '90deg' }] }]} />
+            <View style={[styles.line, { transform: [{ rotate: '135deg' }] }]} />
         </View>
     )
 }
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     line: {
         position: 'absolute',
         height: 3,
-        wudth: 20,
+        width: 20,
         borderRadius: 3,
         backgroundColor: 'black',
     }

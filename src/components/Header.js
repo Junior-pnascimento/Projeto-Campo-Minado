@@ -4,10 +4,10 @@ import Flag from './Flag'
 
 export default props => {
     return (
-        <View style={Styles.container}>
+        <View style={styles.container}>
             <View style={styles.flagContainer}>
                 <TouchableOpacity onPress={props.onFlagPress}
-                    style={style.flagButton}>
+                    style={styles.flagButton}>
                     <Flag bigger />
                 </TouchableOpacity>
                 <Text style={styles.flagsLeft}>= {props.flagsLeft}</Text>
@@ -20,7 +20,7 @@ export default props => {
     )
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'row',
@@ -37,7 +37,7 @@ const style = StyleSheet.create({
         marginTop: 10,
         minWidth: 30
     },
-    flagsleft: {
+    flagsLeft: {
         fontSize: 30,
         fontWeight: 'bold',
         paddingTop: 5,

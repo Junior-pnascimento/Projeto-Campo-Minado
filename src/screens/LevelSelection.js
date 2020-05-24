@@ -12,7 +12,7 @@ export default props => {
         <Modal onRequestClose={props.onCancel}
             visible={props.isVisible} animationType='slide'
             transparent={true}>
-            <View style={Styles.frame}>
+            <View style={styles.frame}>
                 <View style={styles.container}>
                     <Text style={styles.title}>Selecione o Nível</Text>
                     <TouchableOpacity
@@ -25,13 +25,13 @@ export default props => {
                         onPress={() => props.onLevelSelected(0.2)}>
                         <Text style={styles.buttonLabel}>Intermediário</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity 
+                    <TouchableOpacity
                         style={[styles.button, styles.bgHard]}
                         onPress={() => props.onLevelSelected(0.3)}>
                         <Text style={styles.buttonLabel}>Difícil</Text>
                     </TouchableOpacity>
                 </View>
-            </View>    
+            </View>
         </Modal>
     )
 }
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'rgba(0,0,0,0.6)',
     },
-    container : {
+    container: {
         backgroundColor: '#EEE',
         alignItems: 'center',
         justifyContent: 'center',

@@ -2,9 +2,9 @@ import { Dimensions } from 'react-native'
 
 const params = {
     blockSize: 30,
-    boderSize: 5,
+    borderSize: 5,
     fontSize: 15,
-    headerRatio: 0.15, // Proporçao do painel superior na tela
+    headerRatio: 0.15, // Proporção do painel superior na tela
     difficultLevel: 0.1,
     getColumnsAmount() {
         const width = Dimensions.get('window').width
